@@ -10,9 +10,13 @@
             <i data-lucide="menu" class="h-5 w-5"></i>
         </button>
 
+        <div class="hidden h-10 w-28 items-center justify-center rounded-md border border-cms-line bg-white px-2 sm:flex">
+            <img src="{{ asset('images/logo/ptsp.png') }}" alt="Logo DPMPTSP" class="max-h-7 w-full object-contain">
+        </div>
+
         <div>
             <div class="text-sm font-bold text-neutral-900">@yield('page-title', 'Dashboard')</div>
-            <div class="text-xs font-medium text-neutral-500">CMS Portal PTSP</div>
+            <div class="text-xs font-medium text-neutral-500">CMS {{ config('app.name') }}</div>
         </div>
     </div>
 

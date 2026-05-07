@@ -3,9 +3,12 @@
     class="fixed inset-y-0 left-0 z-40 flex w-72 -translate-x-full flex-col bg-cms-blue text-white transition-transform duration-300 lg:translate-x-0"
     aria-label="Sidebar"
 >
-    <div class="flex h-16 items-center border-b border-white/15 px-6">
+    <div class="flex h-28 flex-col items-center justify-center gap-2 border-b border-white/15 px-6 text-center">
+        <div class="flex h-12 w-28 items-center justify-center rounded-md bg-white px-2">
+            <img src="{{ asset('images/logo/ptsp.png') }}" alt="Logo DPMPTSP" class="max-h-9 w-full object-contain">
+        </div>
         <div>
-            <div class="text-base font-extrabold uppercase tracking-wide">CMS PTSP</div>
+            <div class="text-sm font-extrabold uppercase tracking-wide">{{ config('app.name') }}</div>
             <div class="text-xs font-medium text-white/75">Tangerang Selatan</div>
         </div>
     </div>
