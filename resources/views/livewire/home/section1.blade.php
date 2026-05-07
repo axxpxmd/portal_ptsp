@@ -14,17 +14,59 @@
                     <p class="hero-slider__subtitle">Selamat Datang di Website Resmi Dinas PMPTSP Provinsi Jawa Barat</p>
                 </div>
 
+                @php
+                    $slides = [
+                        [
+                            'image' => 'images/slider/bg (1).jpg',
+                            'alt' => 'Maklumat Pelayanan',
+                            'title' => 'Maklumat Pelayanan',
+                            'subtitle' => 'Komitmen pelayanan sesuai standar dan transparan.',
+                            'link' => '#',
+                            'cta' => 'Lihat Detail',
+                        ],
+                        [
+                            'image' => 'images/slider/bg (2).png',
+                            'alt' => 'Layanan Tatap Muka',
+                            'title' => 'Layanan Tatap Muka',
+                            'subtitle' => 'Jadwal operasional dan informasi layanan langsung.',
+                            'link' => null,
+                            'cta' => 'Lihat Detail',
+                        ],
+                        [
+                            'image' => 'images/slider/bg (3).png',
+                            'alt' => 'Realisasi Investasi',
+                            'title' => 'Realisasi Investasi',
+                            'subtitle' => 'Data capaian investasi dan pertumbuhan terkini.',
+                            'link' => null,
+                            'cta' => 'Lihat Detail',
+                        ],
+                    ];
+                @endphp
+
                 <div class="hero-slider" data-hero-slider>
-                    <div class="hero-slider__viewport">
-                        <figure class="hero-slider__slide" data-hero-slide>
-                            <img src="{{ asset('images/slider/bg (1).jpg') }}" alt="Maklumat Pelayanan" class="hero-slider__image">
-                        </figure>
-                        <figure class="hero-slider__slide" data-hero-slide>
-                            <img src="{{ asset('images/slider/bg (2).png') }}" alt="Layanan Tatap Muka" class="hero-slider__image">
-                        </figure>
-                        <figure class="hero-slider__slide" data-hero-slide>
-                            <img src="{{ asset('images/slider/bg (3).png') }}" alt="Realisasi Investasi" class="hero-slider__image">
-                        </figure>
+                    <div class="hero-slider__viewport" style="margin-bottom: 40px !important">
+                        @foreach ($slides as $slide)
+                            <figure
+                                class="hero-slider__slide"
+                                data-hero-slide
+                                data-title="{{ $slide['title'] }}"
+                                data-subtitle="{{ $slide['subtitle'] }}"
+                                data-link="{{ $slide['link'] ?? '' }}"
+                                data-cta="{{ $slide['cta'] ?? 'Lihat Detail' }}"
+                            >
+                                <img src="{{ asset($slide['image']) }}" alt="{{ $slide['alt'] }}" class="hero-slider__image">
+                            </figure>
+                        @endforeach
+                    </div>
+
+                    <div class="hero-slider__meta" data-hero-meta>
+                        <div class="hero-slider__meta-text">
+                            <div class="hero-slider__meta-title" data-hero-title></div>
+                            <div class="hero-slider__meta-subtitle" data-hero-subtitle></div>
+                        </div>
+                        <a href="#" class="hero-slider__meta-cta" data-hero-cta hidden>
+                            Lihat Detail
+                        </a>
                     </div>
 
                     <div class="hero-slider__controls">
@@ -77,6 +119,9 @@
             const progress = slider.querySelector('[data-hero-progress]');
             const currentEl = slider.querySelector('[data-hero-current]');
             const totalEl = slider.querySelector('[data-hero-total]');
+            const metaTitle = slider.querySelector('[data-hero-title]');
+            const metaSubtitle = slider.querySelector('[data-hero-subtitle]');
+            const metaCta = slider.querySelector('[data-hero-cta]');
 
             if (!slides.length) {
                 return;
@@ -113,6 +158,30 @@
 
                 if (progress) {
                     progress.style.width = `${((index + 1) / total) * 100}%`;
+                }
+
+                const activeSlide = slides[index];
+                const title = activeSlide?.dataset.title || '';
+                const subtitle = activeSlide?.dataset.subtitle || '';
+                const link = activeSlide?.dataset.link || '';
+                const cta = activeSlide?.dataset.cta || 'Lihat Detail';
+
+                if (metaTitle) {
+                    metaTitle.textContent = title;
+                }
+
+                if (metaSubtitle) {
+                    metaSubtitle.textContent = subtitle;
+                }
+
+                if (metaCta) {
+                    if (link) {
+                        metaCta.textContent = cta;
+                        metaCta.setAttribute('href', link);
+                        metaCta.removeAttribute('hidden');
+                    } else {
+                        metaCta.setAttribute('hidden', '');
+                    }
                 }
 
                 if (currentEl) {
