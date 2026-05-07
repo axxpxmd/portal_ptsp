@@ -24,8 +24,8 @@
                         colors: {
                             cms: {
                                 blue: '#0164CA',
-                                canvas: '#F5F5F5',
-                                line: '#E5E7EB',
+                                canvas: '#F3F4F6',
+                                line: '#E6E8EC',
                             },
                         },
                     },
@@ -39,10 +39,10 @@
 
             <div id="cms-overlay" class="fixed inset-0 z-30 hidden bg-black/30 lg:hidden"></div>
 
-            <div id="cms-shell" class="min-h-screen transition-[padding] duration-300 lg:pl-72">
+            <div id="cms-shell" class="min-h-screen transition-[padding] duration-300 lg:pl-64">
                 @include('cms.layouts.partials.topbar')
 
-                <main class="p-4 md:p-6">
+                <main class="p-5 md:p-7">
                     @yield('content')
                 </main>
             </div>
@@ -59,7 +59,7 @@
                     const isDesktop = window.innerWidth >= 1024;
 
                     sidebar.style.transform = isOpen ? 'translateX(0)' : 'translateX(-100%)';
-                    shell.style.paddingLeft = isDesktop && isOpen ? '18rem' : '0';
+                    shell.style.paddingLeft = isDesktop && isOpen ? '16rem' : '0';
                     overlay.classList.toggle('hidden', !isOpen || isDesktop);
                     toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
                 };
