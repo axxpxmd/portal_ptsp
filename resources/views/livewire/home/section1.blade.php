@@ -3,14 +3,14 @@
 @endpush
 
 <section class="home-hero">
-    <div class="home-hero__frame">
+    <div class="home-hero__frame home-hero__frame--alt">
         <div class="home-hero__bg" style="background-image: url('{{ asset('images/bg1.webp') }}');"></div>
 
-        <div class="home-hero__content home-hero__content--center">
+        <div class="home-hero__content home-hero__content--alt">
             <!-- Tampilan 1 -->
-            <div class="hero-slider-wrap">
+            {{-- <div class="hero-slider-wrap">
                 <div class="hero-slider__intro">
-                    <h1 class="hero-slider__title display-font">Digitalisasi 'Babarengan' Ngawangun Jabar Istimewa</h1>
+                    <h1 class="hero-slider__title display-font" style="text-align: center">Digitalisasi 'Babarengan' Ngawangun Jabar Istimewa</h1>
                     <p class="hero-slider__subtitle">Selamat Datang di Website Resmi Dinas PMPTSP Provinsi Jawa Barat</p>
                 </div>
 
@@ -90,11 +90,64 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
             <!-- Tampilan 2 -->
-            <div>
-                {{--  --}}
+            <div class="hero-alt">
+                <div class="hero-alt__left">
+                    <h2 class="hero-alt__title">Memenuhi Kebutuhan Informasi Warga Kota Tangerang Selatan</h2>
+                    <p class="hero-alt__desc">
+                        Akses informasi dan layanan publik Kota Tangerang Selatan dengan mudah dan cepat.
+                    </p>
+
+                    <div class="hero-alt__social" aria-label="Social media">
+                        <a href="#" class="hero-alt__social-btn" aria-label="Facebook">f</a>
+                        <a href="#" class="hero-alt__social-btn" aria-label="Instagram">ig</a>
+                        <a href="#" class="hero-alt__social-btn" aria-label="TikTok">tt</a>
+                        <a href="#" class="hero-alt__social-btn" aria-label="YouTube">yt</a>
+                    </div>
+                </div>
+
+                <aside class="hero-alt__weather" aria-label="Cuaca hari ini">
+                    <div class="hero-alt__weather-head">
+                        <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+                        <div>
+                            <div class="hero-alt__weather-location">Pamulang</div>
+                            <div class="hero-alt__weather-date">Hari Ini - 7 Mei 2026</div>
+                        </div>
+                    </div>
+
+                    <div class="hero-alt__weather-main">
+                        <span class="material-symbols-outlined hero-alt__weather-icon" aria-hidden="true">cloud</span>
+                        <div class="hero-alt__weather-temp">32&deg;</div>
+                    </div>
+
+                    <div class="hero-alt__weather-status">Awan Pecah</div>
+
+                    <div class="hero-alt__weather-grid">
+                        <div class="hero-alt__weather-item">
+                            <span class="material-symbols-outlined" aria-hidden="true">water_drop</span>
+                            <div>
+                                <div class="hero-alt__weather-label">Kelembapan</div>
+                                <div class="hero-alt__weather-value">60%</div>
+                            </div>
+                        </div>
+                        <div class="hero-alt__weather-item">
+                            <span class="material-symbols-outlined" aria-hidden="true">air</span>
+                            <div>
+                                <div class="hero-alt__weather-label">Kec. Angin</div>
+                                <div class="hero-alt__weather-value">7.1 km/h</div>
+                            </div>
+                        </div>
+                        <div class="hero-alt__weather-item">
+                            <span class="material-symbols-outlined" aria-hidden="true">explore</span>
+                            <div>
+                                <div class="hero-alt__weather-label">Arah Angin</div>
+                                <div class="hero-alt__weather-value">Timur Laut</div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
             </div>
 
             <!-- Tampilan 3 -->
