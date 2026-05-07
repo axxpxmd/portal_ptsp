@@ -13,18 +13,31 @@ class HeaderMenuController extends Controller
     public function index(Request $request): View
     {
         $search = $request->string('search')->toString();
+        $parentId = $request->query('parent_id');
 
         $menus = HeaderMenu::query()
             ->when($search !== '', fn ($q) => $q->where('label', 'like', "%{$search}%"))
+            ->when($parentId !== null && $parentId !== '', function ($q) use ($parentId) {
+                if ($parentId === 'main') {
+                    $q->whereNull('parent_id');
+                } else {
+                    $q->where('parent_id', $parentId);
+                }
+            })
             ->with('parent')
+            ->orderByRaw('COALESCE(parent_id, id)')
             ->orderBy('parent_id')
             ->orderBy('sort_order')
             ->paginate(15)
             ->withQueryString();
 
+        $parents = HeaderMenu::whereNull('parent_id')->has('children')->orderBy('sort_order')->get();
+
         return view('cms.pages.header_menus.index', [
             'menus' => $menus,
             'search' => $search,
+            'parentId' => $parentId,
+            'parents' => $parents,
         ]);
     }
 
