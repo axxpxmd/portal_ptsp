@@ -30,7 +30,7 @@
     </a>
 </section>
 
-<div class="grid gap-6 xl:grid-cols-[1fr_420px]">
+<div class="grid gap-6 xl:grid-cols-[1fr_520px]">
     <div class="space-y-6">
         <section class="overflow-hidden rounded-2xl border border-cms-line bg-white">
             <div class="flex items-center gap-3 border-b border-cms-line px-5 py-5">
@@ -173,8 +173,8 @@
                             type="password"
                             class="h-12 w-full rounded-2xl border border-cms-line bg-neutral-50 px-4 pr-12 text-sm outline-none focus:border-cms-blue focus:bg-white"
                             placeholder="{{ $isEditing ? 'Kosongkan jika tidak diubah' : 'Minimal 8 karakter' }}"
-                            pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z0-9]{8,}"
-                            title="Minimal 8 karakter dan wajib kombinasi huruf dan angka tanpa simbol."
+                            pattern="(?=.*[A-Za-z])(?=.*\d)[^\s]{8,}"
+                            title="Minimal 8 karakter, wajib kombinasi huruf dan angka, dan boleh memakai simbol."
                             data-password-input
                             @required(! $isEditing)
                         >
@@ -282,19 +282,17 @@
                     return 0;
                 }
 
-                if (!/^[A-Za-z0-9]+$/.test(value)) {
-                    return 1;
-                }
-
                 let score = 0;
-
-                score += 1;
 
                 if (value.length >= 8) {
                     score += 1;
                 }
 
                 if (/[A-Za-z]/.test(value) && /[0-9]/.test(value)) {
+                    score += 1;
+                }
+
+                if (/[^A-Za-z0-9]/.test(value)) {
                     score += 1;
                 }
 

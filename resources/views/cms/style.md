@@ -11,6 +11,8 @@ Main Content (Background): Warna solid #F5F5F5.
 
 Elemen UI: Pastikan semua komponen (card, button, input) bersifat Flat (Tanpa shadow, tanpa gradasi). Gunakan border tipis jika diperlukan untuk pemisah antar elemen.
 
+untuk ukuran border radius gunakan rounded-2xl
+
 Fungsionalitas & Ikon:
 
 Sidebar Toggle: Buat fitur hide/show sidebar dengan transisi halus.
