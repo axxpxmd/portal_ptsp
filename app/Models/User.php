@@ -11,8 +11,18 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Str;
 
-#[Fillable(['name', 'email', 'password'])]
-#[Hidden(['password', 'remember_token'])]
+#[Fillable([
+    'username',
+    'nama',
+    'no_telp',
+    'alamat',
+    'role',
+    'password',
+    'google2fa_secret',
+    'google2fa_enabled',
+    'google2fa_enabled_at',
+])]
+#[Hidden(['password', 'google2fa_secret', 'remember_token'])]
 class User extends Authenticatable
 {
     /** @use HasFactory<UserFactory> */
@@ -26,8 +36,9 @@ class User extends Authenticatable
     protected function casts(): array
     {
         return [
-            'email_verified_at' => 'datetime',
             'password' => 'hashed',
+            'google2fa_enabled' => 'boolean',
+            'google2fa_enabled_at' => 'datetime',
         ];
     }
 
@@ -36,7 +47,7 @@ class User extends Authenticatable
      */
     public function initials(): string
     {
-        return Str::of($this->name)
+        return Str::of($this->nama)
             ->explode(' ')
             ->take(2)
             ->map(fn ($word) => Str::substr($word, 0, 1))

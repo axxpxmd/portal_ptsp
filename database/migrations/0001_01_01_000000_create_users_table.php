@@ -13,10 +13,15 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
+            $table->string('username')->unique();
+            $table->string('nama');
+            $table->string('no_telp', 20)->nullable();
+            $table->text('alamat')->nullable();
+            $table->enum('role', ['admin', 'verifikator', 'editor'])->default('editor');
             $table->string('password');
+            $table->text('google2fa_secret')->nullable();
+            $table->boolean('google2fa_enabled')->default(false);
+            $table->timestamp('google2fa_enabled_at')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
