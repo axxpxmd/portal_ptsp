@@ -1,0 +1,208 @@
+/* s2 = section 2 */
+.s2-section {
+    padding: 4rem 0;
+    background-color: #f9fafb;
+}
+@media (min-width: 768px) {
+    .s2-section {
+        padding: 6rem 0;
+    }
+}
+
+.s2-container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    max-width: 80rem;
+}
+
+.s2-header {
+    text-align: center;
+    max-width: 48rem;
+    margin: 0 auto 3rem auto;
+}
+@media (min-width: 1024px) {
+    .s2-header {
+        margin-bottom: 4rem;
+    }
+}
+
+.s2-title {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1rem;
+    letter-spacing: -0.025em;
+}
+@media (min-width: 768px) {
+    .s2-title {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+    }
+}
+
+.s2-subtitle {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    color: #4b5563;
+}
+
+.s2-grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 2rem;
+}
+@media (min-width: 768px) {
+    .s2-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media (min-width: 1024px) {
+    .s2-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.s2-card {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    border: 1px solid #f3f4f6;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+}
+.s2-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transform: translateY(-0.25rem);
+}
+
+.s2-icon-wrapper {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+.s2-icon-wrapper .material-icons-round {
+    font-size: 1.875rem;
+}
+
+/* Card Variants: Blue */
+.s2-card.blue .s2-icon-wrapper {
+    background-color: #eff6ff;
+    color: #2563eb;
+}
+.s2-card.blue:hover .s2-icon-wrapper {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+.s2-card.blue .s2-card-link {
+    color: #2563eb;
+}
+.s2-card.blue:hover .s2-card-link {
+    color: #1d4ed8;
+}
+
+/* Card Variants: Emerald */
+.s2-card.emerald .s2-icon-wrapper {
+    background-color: #ecfdf5;
+    color: #059669;
+}
+.s2-card.emerald:hover .s2-icon-wrapper {
+    background-color: #059669;
+    color: #ffffff;
+}
+.s2-card.emerald .s2-card-link {
+    color: #059669;
+}
+.s2-card.emerald:hover .s2-card-link {
+    color: #047857;
+}
+
+/* Card Variants: Orange */
+.s2-card.orange .s2-icon-wrapper {
+    background-color: #fff7ed;
+    color: #ea580c;
+}
+.s2-card.orange:hover .s2-icon-wrapper {
+    background-color: #ea580c;
+    color: #ffffff;
+}
+.s2-card.orange .s2-card-link {
+    color: #ea580c;
+}
+.s2-card.orange:hover .s2-card-link {
+    color: #c2410c;
+}
+
+.s2-card-title {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 0.75rem;
+}
+
+.s2-card-desc {
+    color: #4b5563;
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+    line-height: 1.625;
+}
+
+.s2-card-link {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: color 0.3s;
+    padding-top: 0.75rem;
+    border-top: 1px solid #f9fafb;
+    margin-top: auto;
+    text-decoration: none;
+}
+.s2-card-link .material-icons-round {
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    transition: transform 0.3s;
+}
+.s2-card:hover .s2-card-link .material-icons-round {
+    transform: translateX(0.25rem);
+}
+
+.s2-action {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.s2-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #111827;
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 0.75rem;
+    transition: all 0.3s;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    text-decoration: none;
+    cursor: pointer;
+}
+.s2-btn:hover {
+    background-color: #f9fafb;
+    color: #2563eb;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}

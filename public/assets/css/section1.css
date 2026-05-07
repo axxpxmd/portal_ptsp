@@ -742,6 +742,15 @@
         min-height: 520px;
     }
 
+    .hero-slider__title{
+        line-height: 1.2;
+    }
+
+    .hero-slider__slide {
+        left: 40%;
+        width: min(90vw, 480px);
+    }
+
     .hero-slider__controls {
         flex-wrap: wrap;
         justify-content: center;
