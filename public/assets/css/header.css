@@ -346,18 +346,7 @@
 
 @media (max-width: 1024px) {
     .header-inner {
-        padding: 14px 28px;
-    }
-
-    .nav-list {
-        justify-content: flex-start;
-        gap: 16px;
-    }
-}
-
-@media (max-width: 768px) {
-    .header-inner {
-        padding: 12px 20px;
+        padding: 12px 24px;
         gap: 16px;
     }
 

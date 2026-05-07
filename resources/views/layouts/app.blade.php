@@ -31,7 +31,7 @@
         <div class="app-shell">
             @include('layouts.header')
 
-            <main class="app-main">
+            <main class="app-main" style="background-color: #F5F5F5 !important;">
                {{ $slot }}
             </main>
         </div>

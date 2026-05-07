@@ -45,7 +45,7 @@
         const childLinks = header.querySelectorAll('.nav-item.has-children > a');
         childLinks.forEach(link => {
             link.addEventListener('click', (e) => {
-                if (window.innerWidth <= 768) {
+                if (window.innerWidth <= 1024) {
                     e.preventDefault();
                     link.parentElement.classList.toggle('is-open');
                 }
