@@ -10,20 +10,53 @@
             </div>
         </div>
 
-        <nav class="header-nav" aria-label="Primary">
-            <a href="#" class="nav-link">Profil</a>
-            <a href="#" class="nav-link">
-                Layanan
-                <span class="nav-caret"></span>
-            </a>
-            <a href="#" class="nav-link">
-                Informasi
-                <span class="nav-caret"></span>
-            </a>
-            <a href="#" class="nav-link">
-                Standar Pelayanan
-                <span class="nav-caret"></span>
-            </a>
+        <button class="nav-toggle" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="primary-navigation">
+            <span class="nav-toggle__icon" aria-hidden="true"></span>
+        </button>
+
+        <nav class="header-nav" id="primary-navigation" aria-label="Primary">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#" class="nav-link">Beranda</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Profil</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Layanan</a></li>
+                <li class="nav-item has-children">
+                    <a href="#" class="nav-link">
+                        Informasi
+                        <span class="nav-caret"></span>
+                    </a>
+                    <ul class="nav-submenu" aria-label="Informasi">
+                        <li><a href="#" class="nav-sublink">Berita</a></li>
+                        <li><a href="#" class="nav-sublink">Agenda</a></li>
+                        <li><a href="#" class="nav-sublink">Data & Statistik</a></li>
+                        <li><a href="#" class="nav-sublink">Pengumuman</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#" class="nav-link">Standar Pelayanan</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Pengaduan</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Galeri</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Kontak</a></li>
+            </ul>
         </nav>
     </div>
 </header>
+
+<script>
+    (() => {
+        const header = document.querySelector('.site-header');
+        if (!header) {
+            return;
+        }
+
+        const toggle = header.querySelector('.nav-toggle');
+        const nav = header.querySelector('#primary-navigation');
+
+        if (!toggle || !nav) {
+            return;
+        }
+
+        toggle.addEventListener('click', () => {
+            const isOpen = header.classList.toggle('nav-open');
+            toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+    })();
+</script>
