@@ -1,10 +1,9 @@
 <?php
 
 use App\Http\Controllers\cms\auth\LoginController;
+use App\Http\Controllers\cms\HeaderMenuController;
 use App\Http\Controllers\cms\UserController;
-use App\Livewire\{
-    Home
-};
+use App\Livewire\Home;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', Home::class)->name('home');
@@ -17,6 +16,7 @@ Route::prefix('cms')->name('cms.')->group(function (): void {
     Route::middleware('auth')->group(function (): void {
         Route::get('dashboard', fn () => view('cms.dashboard'))->name('dashboard');
         Route::resource('users', UserController::class);
+        Route::resource('header-menus', HeaderMenuController::class);
         Route::post('logout', [LoginController::class, 'logout'])->name('logout');
     });
 });

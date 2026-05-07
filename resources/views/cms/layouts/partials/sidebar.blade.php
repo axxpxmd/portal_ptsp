@@ -23,9 +23,9 @@
             <i data-lucide="users" class="h-5 w-5"></i>
             Users
         </a>
-        <a href="#" class="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-semibold text-white/85 hover:bg-white/10 hover:text-white">
+        <a href="{{ route('cms.header-menus.index') }}" class="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-semibold text-white/85 hover:bg-white/10 hover:text-white">
             <i data-lucide="bar-chart-3" class="h-5 w-5"></i>
-            Reports
+            Header Menu
         </a>
         <a href="#" class="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-semibold text-white/85 hover:bg-white/10 hover:text-white">
             <i data-lucide="settings" class="h-5 w-5"></i>

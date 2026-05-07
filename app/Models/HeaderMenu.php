@@ -2,56 +2,46 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Attributes\Fillable;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-#[Fillable([
-    'parent_id',
-    'label',
-    'url',
-    'route_name',
-    'route_parameters',
-    'target',
-    'icon',
-    'display_type',
-    'sort_order',
-    'is_active',
-])]
 class HeaderMenu extends Model
 {
-    use SoftDeletes;
+    use HasFactory, SoftDeletes;
 
-    /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
-     */
-    protected function casts(): array
-    {
-        return [
-            'route_parameters' => 'array',
-            'is_active' => 'boolean',
-        ];
-    }
+    protected $table = 'header_menus';
 
-    /**
-     * Get the parent menu.
-     */
-    public function parent(): BelongsTo
+    protected $fillable = [
+        'parent_id',
+        'label',
+        'url',
+        'route_name',
+        'route_parameters',
+        'target',
+        'icon',
+        'display_type',
+        'sort_order',
+        'is_active',
+    ];
+
+    protected $casts = [
+        'route_parameters' => 'array',
+        'is_active' => 'boolean',
+    ];
+
+    public function parent()
     {
         return $this->belongsTo(self::class, 'parent_id');
     }
 
-    /**
-     * Get the child menus.
-     */
-    public function children(): HasMany
+    public function children()
     {
-        return $this->hasMany(self::class, 'parent_id')
-            ->orderBy('sort_order')
-            ->orderBy('label');
+        return $this->hasMany(self::class, 'parent_id')->orderBy('sort_order');
+    }
+
+    public function scopeActive($query)
+    {
+        return $query->where('is_active', true);
     }
 }
