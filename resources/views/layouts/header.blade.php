@@ -16,25 +16,10 @@
 
         <nav class="header-nav" id="primary-navigation" aria-label="Primary">
             <ul class="nav-list">
-                <li class="nav-item"><a href="#" class="nav-link">Beranda</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Profil</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Layanan</a></li>
-                <li class="nav-item has-children">
-                    <a href="#" class="nav-link">
-                        Informasi
-                        <span class="nav-caret"></span>
-                    </a>
-                    <ul class="nav-submenu" aria-label="Informasi">
-                        <li><a href="#" class="nav-sublink">Berita</a></li>
-                        <li><a href="#" class="nav-sublink">Agenda</a></li>
-                        <li><a href="#" class="nav-sublink">Data & Statistik</a></li>
-                        <li><a href="#" class="nav-sublink">Pengumuman Standar Pelayanan</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a href="#" class="nav-link">Standar Pelayanan</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Pengaduan</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Galeri</a></li>
-                <li class="nav-item"><a href="#" class="nav-link nav-btn">Kontak</a></li>
+                @include('layouts.partials.header-menu-items', [
+                    'menus' => $headerMenus ?? collect(),
+                    'depth' => 0,
+                ])
             </ul>
         </nav>
     </div>
@@ -57,12 +42,11 @@
             });
         }
 
-        // Handle mobile accordion toggle logic
-        const childLinks = header.querySelectorAll('.nav-item.has-children > .nav-link');
+        const childLinks = header.querySelectorAll('.nav-item.has-children > a');
         childLinks.forEach(link => {
             link.addEventListener('click', (e) => {
                 if (window.innerWidth <= 768) {
-                    e.preventDefault(); // prevent navigation on tap
+                    e.preventDefault();
                     link.parentElement.classList.toggle('is-open');
                 }
             });
