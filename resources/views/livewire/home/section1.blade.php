@@ -95,7 +95,7 @@
             <!-- Tampilan 2 -->
             <div class="hero-alt">
                 <div class="hero-alt__left">
-                    <h2 class="hero-alt__title">Memenuhi Kebutuhan Informasi Warga Kota Tangerang Selatan</h2>
+                    <h2 class="hero-alt__title">DPMPTSP Kota Tangerang Selatan</h2>
                     <p class="hero-alt__desc">
                         Akses informasi dan layanan publik Kota Tangerang Selatan dengan mudah dan cepat.
                     </p>

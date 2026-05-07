@@ -49,7 +49,7 @@
 }
 
 .home-hero__frame--alt {
-    min-height: 70vh;
+    height: auto;
 }
 
 .home-hero__frame--alt .home-hero__bg::after {
@@ -71,7 +71,8 @@
     gap: 36px;
     align-items: center;
     position: relative;
-    margin-top: 70px;
+    margin-top: 80px;
+    margin-bottom: 80px;
 }
 
 .hero-alt__plane {
@@ -86,11 +87,12 @@
 
 .hero-alt__left {
     color: #ffffff;
+    padding: 0px 40px;
 }
 
 .hero-alt__title {
     margin: 0;
-    font-size: clamp(26px, 3.6vw, 40px);
+    font-size: clamp(26px, 3.6vw, 38px);
     line-height: 1.2;
     font-weight: 800;
 }
@@ -193,8 +195,8 @@
 }
 
 .hero-alt__social-btn {
-    width: 34px;
-    height: 34px;
+    width: 45px;
+    height: 45px;
     border-radius: 9999px;
     border: 1px solid rgba(255, 255, 255, 0.35);
     background: rgba(255, 255, 255, 0.12);
