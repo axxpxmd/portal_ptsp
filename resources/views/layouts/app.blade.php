@@ -13,39 +13,16 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-        <script>
-            tailwind.config = {
-                theme: {
-                    extend: {
-                        fontFamily: {
-                            sans: ['Poppins', 'ui-sans-serif', 'system-ui'],
-                            display: ['Poppins', 'ui-sans-serif', 'system-ui'],
-                        },
-                        keyframes: {
-                            'float-in': {
-                                '0%': { transform: 'translateY(18px)', opacity: '0' },
-                                '100%': { transform: 'translateY(0)', opacity: '1' },
-                            },
-                            'rise-in': {
-                                '0%': { transform: 'translateY(20px)', opacity: '0' },
-                                '100%': { transform: 'translateY(0)', opacity: '1' },
-                            },
-                        },
-                        animation: {
-                            'float-in': 'float-in 0.9s ease-out both',
-                            'rise-in': 'rise-in 1s ease-out both 0.12s',
-                        },
-                    },
-                },
-            };
-        </script>
-        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/header.css') }}">
+
+        @stack('styles')
     </head>
-    <body class="min-h-screen bg-white font-sans text-[#073348]">
-        <div class="flex min-h-screen flex-col">
+    <body class="app-body">
+        <div class="app-shell">
             @include('layouts.header')
 
-            <main class="flex-1">
+            <main class="app-main">
                {{ $slot }}
             </main>
         </div>
