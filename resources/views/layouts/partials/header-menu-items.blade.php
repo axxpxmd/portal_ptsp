@@ -9,13 +9,13 @@
         }
 
         $linkClass = $depth === 0 ? 'nav-link' : 'nav-sublink';
-        $isContactButton = $depth === 0 && str($menu->label)->lower()->toString() === 'kontak';
+        $isButton = $depth === 0 && $menu->display_type === 'button';
     @endphp
 
     <li class="nav-item{{ $hasChildren ? ' has-children' : '' }}">
         <a
             href="{{ $href }}"
-            class="{{ $linkClass }}{{ $isContactButton ? ' nav-btn' : '' }}"
+            class="{{ $linkClass }}{{ $isButton ? ' nav-btn' : '' }}"
             target="{{ $menu->target }}"
             @if ($menu->target === '_blank') rel="noopener noreferrer" @endif
         >

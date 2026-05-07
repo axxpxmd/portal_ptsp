@@ -16,6 +16,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
     'route_parameters',
     'target',
     'icon',
+    'display_type',
     'sort_order',
     'is_active',
 ])]

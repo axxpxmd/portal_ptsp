@@ -131,6 +131,7 @@ class HeaderMenuSeeder extends Seeder
             [
                 'label' => 'Kontak',
                 'url' => '#',
+                'display_type' => 'button',
                 'sort_order' => 80,
             ],
         ];
@@ -158,6 +159,7 @@ class HeaderMenuSeeder extends Seeder
             'route_parameters' => null,
             'target' => '_self',
             'icon' => null,
+            'display_type' => 'link',
             'sort_order' => 0,
             'is_active' => true,
         ], $menu);

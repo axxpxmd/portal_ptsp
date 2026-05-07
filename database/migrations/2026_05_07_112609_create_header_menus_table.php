@@ -20,6 +20,7 @@ return new class extends Migration
             $table->json('route_parameters')->nullable()->comment('Parameter route dalam format JSON jika route membutuhkan parameter.');
             $table->string('target', 20)->default('_self')->comment('Target pembukaan link, misalnya _self atau _blank.');
             $table->string('icon')->nullable()->comment('Nama class atau identifier icon menu jika dibutuhkan.');
+            $table->string('display_type', 20)->default('link')->comment('Tipe tampilan menu, misalnya link untuk menu biasa atau button untuk tombol.');
             $table->unsignedInteger('sort_order')->default(0)->comment('Urutan tampil menu dalam parent yang sama.');
             $table->boolean('is_active')->default(true)->comment('Status menu aktif atau tidak aktif.');
             $table->timestamp('created_at')->nullable()->comment('Waktu data menu dibuat.');
