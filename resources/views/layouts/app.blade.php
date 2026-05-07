@@ -41,12 +41,12 @@
         </script>
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body class="min-h-screen bg-[radial-gradient(circle_at_top,_#d6f6fb_0%,_#bfeef5_35%,_#9cd6ee_70%,_#84c1e8_100%)] font-sans text-[#073348]">
+    <body class="min-h-screen bg-white font-sans text-[#073348]">
         <div class="flex min-h-screen flex-col">
-            @include('partials.header')
+            @include('layouts.header')
 
             <main class="flex-1">
-                @yield('content')
+               {{ $slot }}
             </main>
         </div>
     </body>
