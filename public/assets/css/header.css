@@ -112,10 +112,11 @@
 }
 
 .nav-toggle__icon {
+    display: block;
     position: relative;
     width: 24px;
     height: 2.5px;
-    background: white;
+    background: #ffffff;
     border-radius: 9999px;
     transition: background 0.3s ease;
 }
@@ -126,9 +127,9 @@
     position: absolute;
     right: 0;
     height: 2.5px;
-    background: white;
+    background: #ffffff;
     border-radius: 9999px;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), width 0.3s ease;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), width 0.3s ease, background 0.3s ease;
 }
 
 .nav-toggle__icon::before {
@@ -145,6 +146,10 @@
     width: 24px;
 }
 
+.site-header.nav-open {
+    background: #ffffff;
+}
+
 .site-header.nav-open .nav-toggle__icon {
     background: transparent;
 }
@@ -152,11 +157,13 @@
 .site-header.nav-open .nav-toggle__icon::before {
     transform: translateY(8px) rotate(45deg);
     width: 24px;
+    background: #083349;
 }
 
 .site-header.nav-open .nav-toggle__icon::after {
     transform: translateY(-8px) rotate(-45deg);
     width: 24px;
+    background: #083349;
 }
 
 .nav-link {
@@ -166,6 +173,20 @@
     align-items: center;
     gap: 4px;
     white-space: nowrap;
+}
+
+.nav-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 8px 20px;
+    font-weight: 700;
+    border-radius: 9999px;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    background: #ffffff;
+    color: #083349;
 }
 
 .nav-submenu {
@@ -266,10 +287,6 @@
 }
 
 @media (max-width: 768px) {
-    .site-header {
-        background: #ffffff;
-    }
-
     .header-inner {
         padding: 12px 20px;
         gap: 16px;
@@ -328,6 +345,16 @@
         color: #0b1a22;
     }
 
+    .nav-link.nav-btn {
+        background: #083349;
+        color: #ffffff;
+        justify-content: center;
+        padding: 12px 0;
+        margin: 12px 0;
+        border-radius: 8px;
+        border: none;
+    }
+
     .nav-caret {
         width: 32px;
         height: 32px;
@@ -348,6 +375,7 @@
 
     .nav-item.is-open .nav-caret::after {
         transform: translateY(2px) rotate(-135deg);
+    }
 
     .nav-submenu {
         display: none;
@@ -375,7 +403,7 @@
     }
 
     .nav-toggle {
-        display: inline-flex;
+        display: flex;
     }
 }
 

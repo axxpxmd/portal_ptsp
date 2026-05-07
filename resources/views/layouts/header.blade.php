@@ -34,7 +34,7 @@
                 <li class="nav-item"><a href="#" class="nav-link">Standar Pelayanan</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Pengaduan</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Galeri</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Kontak</a></li>
+                <li class="nav-item"><a href="#" class="nav-link nav-btn">Kontak</a></li>
             </ul>
         </nav>
     </div>
