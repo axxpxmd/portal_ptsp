@@ -28,7 +28,7 @@
                         <li><a href="#" class="nav-sublink">Berita</a></li>
                         <li><a href="#" class="nav-sublink">Agenda</a></li>
                         <li><a href="#" class="nav-sublink">Data & Statistik</a></li>
-                        <li><a href="#" class="nav-sublink">Pengumuman</a></li>
+                        <li><a href="#" class="nav-sublink">Pengumuman Standar Pelayanan</a></li>
                     </ul>
                 </li>
                 <li class="nav-item"><a href="#" class="nav-link">Standar Pelayanan</a></li>

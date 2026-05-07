@@ -8,13 +8,21 @@
     min-height: 360px;
     width: 100%;
     overflow: hidden;
+
 }
 
 .home-hero__bg {
     position: absolute;
     inset: 0;
     background-size: cover;
-    background-position: center;
+    background-position: top center;
+}
+
+.home-hero__bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.2);
 }
 
 .home-hero__content {
