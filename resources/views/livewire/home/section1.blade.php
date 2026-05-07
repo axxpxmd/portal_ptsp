@@ -101,10 +101,10 @@
                     </p>
 
                     <div class="hero-alt__social" aria-label="Social media">
-                        <a href="#" class="hero-alt__social-btn" aria-label="Facebook">f</a>
-                        <a href="#" class="hero-alt__social-btn" aria-label="Instagram">ig</a>
-                        <a href="#" class="hero-alt__social-btn" aria-label="TikTok">tt</a>
-                        <a href="#" class="hero-alt__social-btn" aria-label="YouTube">yt</a>
+                        <a href="#" class="hero-alt__social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="hero-alt__social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="hero-alt__social-btn" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#" class="hero-alt__social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
                     </div>
                 </div>
 
