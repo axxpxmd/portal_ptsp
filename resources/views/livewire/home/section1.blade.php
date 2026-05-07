@@ -11,7 +11,7 @@
             {{-- <div class="hero-slider-wrap">
                 <div class="hero-slider__intro">
                     <h1 class="hero-slider__title display-font" style="text-align: center">Digitalisasi 'Babarengan' Ngawangun Jabar Istimewa</h1>
-                    <p class="hero-slider__subtitle">Selamat Datang di Website Resmi Dinas PMPTSP Provinsi Jawa Barat</p>
+                    <p class="hero-slider__subtitle" style="text-align: center">Selamat Datang di Website Resmi Dinas PMPTSP Provinsi Jawa Barat</p>
                 </div>
 
                 @php
