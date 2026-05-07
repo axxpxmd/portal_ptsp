@@ -110,10 +110,10 @@
 
                 <aside class="hero-alt__weather" aria-label="Cuaca hari ini">
                     <div class="hero-alt__weather-head">
-                        <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+                        <i class="fa-solid fa-location-dot" style="font-size: 20px; color: #fff;"></i>
                         <div>
                             <div class="hero-alt__weather-location">{{ $weather['location'] }}</div>
-                            <div class="hero-alt__weather-date">{{ $weather['day_label'] }} - {{ $weather['date'] }}</div>
+                            <div class="hero-alt__weather-date">{{ $weather['day_label'] }} &bull; {{ $weather['date'] }}</div>
                         </div>
                     </div>
 
@@ -127,24 +127,18 @@
                     <div class="hero-alt__weather-grid">
                         <div class="hero-alt__weather-item">
                             <i class="fa-solid fa-droplet"></i>
-                            <div>
-                                <div class="hero-alt__weather-label">Kelembapan</div>
-                                <div class="hero-alt__weather-value">{{ $weather['humidity'] }}%</div>
-                            </div>
+                            <div class="hero-alt__weather-label">Kelembapan</div>
+                            <div class="hero-alt__weather-value">{{ $weather['humidity'] }}%</div>
                         </div>
                         <div class="hero-alt__weather-item">
                             <i class="fa-solid fa-wind"></i>
-                            <div>
-                                <div class="hero-alt__weather-label">Kec. Angin</div>
-                                <div class="hero-alt__weather-value">{{ $weather['wind_speed'] }} km/h</div>
-                            </div>
+                            <div class="hero-alt__weather-label">Kec. Angin</div>
+                            <div class="hero-alt__weather-value">{{ $weather['wind_speed'] }} km/h</div>
                         </div>
                         <div class="hero-alt__weather-item">
                             <i class="fa-solid fa-compass"></i>
-                            <div>
-                                <div class="hero-alt__weather-label">Arah Angin</div>
-                                <div class="hero-alt__weather-value">{{ $weather['wind_direction'] }}</div>
-                            </div>
+                            <div class="hero-alt__weather-label">Arah Angin</div>
+                            <div class="hero-alt__weather-value">{{ $weather['wind_direction'] }}</div>
                         </div>
                     </div>
                 </aside>

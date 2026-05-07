@@ -220,54 +220,57 @@
     margin-left: auto;
     padding: 22px;
     border-radius: 24px;
-    background: rgba(44, 52, 58, 0.72);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(114, 114, 114, 0.6);
+    /* border: 1px solid rgba(255, 255, 255, 0.2); */
     color: #ffffff;
-    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(8px);
 }
 
 .hero-alt__weather-head {
     display: flex;
-    gap: 10px;
+    gap: 12px;
     align-items: flex-start;
-    font-size: 12px;
+    font-size: 13px;
     color: rgba(255, 255, 255, 0.75);
 }
 
 .hero-alt__weather-location {
     font-weight: 700;
-    font-size: 14px;
+    font-size: 16px;
     color: #ffffff;
 }
 
 .hero-alt__weather-date {
-    margin-top: 2px;
+    margin-top: 4px;
 }
 
 .hero-alt__weather-main {
     display: flex;
     align-items: center;
-    gap: 14px;
-    margin-top: 18px;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 36px;
 }
 
 .hero-alt__weather-icon {
-    font-size: 42px;
+    font-size: 72px;
+    color: #ffffff;
 }
 
 .hero-alt__weather-temp {
-    font-size: 40px;
-    font-weight: 700;
+    font-size: 64px;
+    font-weight: 400;
 }
 
 .hero-alt__weather-status {
-    margin-top: 6px;
+    margin-top: 24px;
     font-weight: 600;
+    font-size: 18px;
+    text-align: center;
 }
 
 .hero-alt__weather-grid {
-    margin-top: 18px;
+    margin-top: 36px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 12px;
@@ -275,25 +278,33 @@
 
 .hero-alt__weather-item {
     display: flex;
-    gap: 8px;
+    flex-direction: column;
+    gap: 6px;
     align-items: center;
-    padding: 10px;
-    border-radius: 14px;
-    background: rgba(255, 255, 255, 0.12);
+    padding: 16px 10px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     font-size: 11px;
+    text-align: center;
 }
 
-.hero-alt__weather-item .material-symbols-outlined {
-    font-size: 18px;
+.hero-alt__weather-item i {
+    font-size: 20px;
+    margin-bottom: 6px;
+    color: #ffffff;
 }
 
 .hero-alt__weather-label {
     color: rgba(255, 255, 255, 0.7);
+    font-weight: 600;
+    font-size: 12px;
 }
 
 .hero-alt__weather-value {
     margin-top: 2px;
     font-weight: 700;
+    font-size: 13px;
 }
 
 .hero-slider-wrap {
