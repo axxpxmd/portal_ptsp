@@ -4,7 +4,7 @@
 
 .home-hero__frame {
     position: relative;
-    min-height: 70vh;
+    /* min-height: 75vh; */
     height: auto;
     width: 100%;
     overflow: hidden;
@@ -161,7 +161,7 @@
 }
 
 .hero-slider__btn:hover {
-    background: #2aa77a;
+    background: #F7D558;
     transform: translateY(-1px);
 }
 

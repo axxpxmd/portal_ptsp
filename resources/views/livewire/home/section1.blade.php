@@ -10,7 +10,7 @@
             <!-- Tampilan 1 -->
             <div class="hero-slider-wrap">
                 <div class="hero-slider__intro">
-                    <h1 class="hero-slider__title display-font">Dinas DPMPTSP Tangerang Selatan</h1>
+                    <h1 class="hero-slider__title display-font">Digitalisasi 'Babarengan' Ngawangun Jabar Istimewa</h1>
                     <p class="hero-slider__subtitle">Selamat Datang di Website Resmi Dinas PMPTSP Provinsi Jawa Barat</p>
                 </div>
 
