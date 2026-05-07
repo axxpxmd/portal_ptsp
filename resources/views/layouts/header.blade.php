@@ -50,13 +50,22 @@
         const toggle = header.querySelector('.nav-toggle');
         const nav = header.querySelector('#primary-navigation');
 
-        if (!toggle || !nav) {
-            return;
+        if (toggle && nav) {
+            toggle.addEventListener('click', () => {
+                const isOpen = header.classList.toggle('nav-open');
+                toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            });
         }
 
-        toggle.addEventListener('click', () => {
-            const isOpen = header.classList.toggle('nav-open');
-            toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        // Handle mobile accordion toggle logic
+        const childLinks = header.querySelectorAll('.nav-item.has-children > .nav-link');
+        childLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault(); // prevent navigation on tap
+                    link.parentElement.classList.toggle('is-open');
+                }
+            });
         });
     })();
 </script>
