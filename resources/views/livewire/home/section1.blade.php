@@ -112,38 +112,38 @@
                     <div class="hero-alt__weather-head">
                         <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
                         <div>
-                            <div class="hero-alt__weather-location">Pamulang</div>
-                            <div class="hero-alt__weather-date">Hari Ini - 7 Mei 2026</div>
+                            <div class="hero-alt__weather-location">{{ $weather['location'] }}</div>
+                            <div class="hero-alt__weather-date">{{ $weather['day_label'] }} - {{ $weather['date'] }}</div>
                         </div>
                     </div>
 
                     <div class="hero-alt__weather-main">
-                        <span class="material-symbols-outlined hero-alt__weather-icon" aria-hidden="true">cloud</span>
-                        <div class="hero-alt__weather-temp">32&deg;</div>
+                        <i class="{{ $weather['icon'] }} hero-alt__weather-icon"></i>
+                        <div class="hero-alt__weather-temp">{{ $weather['temp'] }}&deg;</div>
                     </div>
 
-                    <div class="hero-alt__weather-status">Awan Pecah</div>
+                    <div class="hero-alt__weather-status">{{ $weather['description'] }}</div>
 
                     <div class="hero-alt__weather-grid">
                         <div class="hero-alt__weather-item">
-                            <span class="material-symbols-outlined" aria-hidden="true">water_drop</span>
+                            <i class="fa-solid fa-droplet"></i>
                             <div>
                                 <div class="hero-alt__weather-label">Kelembapan</div>
-                                <div class="hero-alt__weather-value">60%</div>
+                                <div class="hero-alt__weather-value">{{ $weather['humidity'] }}%</div>
                             </div>
                         </div>
                         <div class="hero-alt__weather-item">
-                            <span class="material-symbols-outlined" aria-hidden="true">air</span>
+                            <i class="fa-solid fa-wind"></i>
                             <div>
                                 <div class="hero-alt__weather-label">Kec. Angin</div>
-                                <div class="hero-alt__weather-value">7.1 km/h</div>
+                                <div class="hero-alt__weather-value">{{ $weather['wind_speed'] }} km/h</div>
                             </div>
                         </div>
                         <div class="hero-alt__weather-item">
-                            <span class="material-symbols-outlined" aria-hidden="true">explore</span>
+                            <i class="fa-solid fa-compass"></i>
                             <div>
                                 <div class="hero-alt__weather-label">Arah Angin</div>
-                                <div class="hero-alt__weather-value">Timur Laut</div>
+                                <div class="hero-alt__weather-value">{{ $weather['wind_direction'] }}</div>
                             </div>
                         </div>
                     </div>
