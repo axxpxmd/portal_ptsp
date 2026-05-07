@@ -4,7 +4,7 @@
 @section('page-title', 'Dashboard')
 
 @section('content')
-    <section class="rounded-3xl border border-cms-line bg-white p-6 md:p-8">
+    <section class="rounded-2xl border border-cms-line bg-white p-6 md:p-8">
         <div class="flex flex-col justify-between gap-6 md:flex-row md:items-start">
             <div>
                 <p class="text-sm font-semibold uppercase tracking-wide text-cms-blue">Selamat datang</p>
