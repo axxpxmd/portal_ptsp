@@ -69,7 +69,8 @@
         <!-- Action Button -->
         <div class="s2-action">
              <a href="#" class="s2-btn">
-                Lihat Semua Layanan
+                Lihat Selengkapnya
+                <span class="material-icons-round">arrow_forward</span>
             </a>
         </div>
     </div>
