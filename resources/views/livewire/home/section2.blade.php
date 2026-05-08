@@ -6,7 +6,7 @@
     <div class="s2-container">
         <!-- Section Header -->
         <div class="s2-header">
-            <h2 class="s2-title"><span style="color: #044FA0;">Layanan Populer</span> <span style="color: #F7D558;">& Unggulan</span></h2>
+            <h2 class="s2-title"><span style="color: #48ABA9;">Layanan Populer</span> <span style="color: #48ABA9;">& Unggulan</span></h2>
             <p class="s2-subtitle">Berbagai layanan administratif yang sering diakses oleh masyarakat. Kami hadir untuk memberikan kemudahan proses perizinan Anda.</p>
         </div>
 

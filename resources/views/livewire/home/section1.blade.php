@@ -65,7 +65,7 @@
                             <div class="hero-slider__meta-subtitle" data-hero-subtitle></div>
                         </div>
                         <a href="#" class="hero-slider__meta-cta" data-hero-cta hidden>
-                            Lihat Detail
+                            Lihat Detaildd
                         </a>
                     </div>
 
