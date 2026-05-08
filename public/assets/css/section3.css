@@ -55,14 +55,18 @@
     min-width: 0;
 }
 
+.s3-carousel-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
 .s3-carousel {
     position: relative;
     border-radius: 1rem;
     overflow: hidden;
     background-color: #000;
     aspect-ratio: 4 / 3; /* To keep it somewhat rectangular */
-    display: flex;
-    flex-direction: column;
+    display: block;
     margin-top: 1.5rem;
 }
 
@@ -85,28 +89,28 @@
     left: 0;
     right: 0;
     background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 50%, transparent 100%);
-    padding: 2rem 3rem 3rem 1.5rem;
+    padding: 2rem 2rem 1rem 1.5rem;
     color: #fff;
 }
 
 .s3-carousel-title {
-    font-size: 1.25rem;
-    font-weight: 700;
+    font-size: 24px;
+    font-weight: 800;
     margin-bottom: 0.75rem;
-    line-height: 1.4;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    line-height: 1.3;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.9);
 }
 
 .s3-carousel-date {
     display: inline-flex;
     align-items: center;
-    font-size: 0.875rem;
-    color: #f6c046;
-    font-weight: 600;
+    font-size: 14.4px;
+    color: #F7D558;
+    /* font-weight: 700; */
 }
 
 .s3-date-icon {
-    font-size: 1.125rem;
+    font-size: 14.4px;
     margin-right: 0.375rem;
 }
 
@@ -115,61 +119,58 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3rem;
+    height: 3rem;
     border-radius: 50%;
-    background: rgba(255,255,255,0.8);
+    background: rgba(255,255,255,0.9);
     color: #0b4b8a;
     border: none;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-    transition: background 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: background 0.3s, transform 0.2s;
     z-index: 2;
 }
 
 .s3-carousel-btn:hover {
     background: #fff;
+    transform: translateY(-50%) scale(1.05);
 }
 
 .s3-carousel-btn .material-icons-round {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .s3-carousel-btn.prev-btn {
-    left: 0.75rem;
+    left: 1rem;
 }
 
 .s3-carousel-btn.next-btn {
-    right: 0.75rem;
+    right: 1rem;
 }
 
 /* Dots */
 .s3-carousel-dots {
-    position: absolute;
-    bottom: 1rem;
-    left: 0;
-    right: 0;
     display: flex;
     justify-content: center;
-    gap: 0.5rem;
-    z-index: 2;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
 }
 
 .s3-dot {
-    width: 8px;
-    height: 8px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
-    background-color: rgba(255,255,255,0.5);
+    background-color: #d1d5db;
     cursor: pointer;
     transition: all 0.3s;
 }
 
 .s3-dot.active {
-    width: 24px;
-    border-radius: 4px;
+    width: 36px;
+    border-radius: 9999px;
     background-color: #0b4b8a; /* active dot blue */
 }
 

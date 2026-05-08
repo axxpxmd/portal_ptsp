@@ -20,27 +20,30 @@
                     <h2 class="s3-title">Berita Utama</h2>
                     <div class="s3-title-line"></div>
                 </div>
-                <div class="s3-carousel">
-                    <!-- Carousel Item -->
-                    <div class="s3-carousel-inner">
-                        <!-- Temporary placeholder image mimicking the design -->
-                        <img src="{{ asset('images/slider/default.jpg') }}" alt="Berita Utama" class="s3-carousel-img" onerror="this.src='https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
-                        <div class="s3-carousel-overlay">
-                            <h3 class="s3-carousel-title">Bangun Keterampilan Digital Generasi Muda, Warga Pondok Karya Antusias Ikuti Pelatihan Videografi dari Pemkot Tangsel</h3>
-                            <div class="s3-carousel-date">
-                                <span class="material-icons-round s3-date-icon">calendar_today</span>
-                                Selasa, 5 Mei 2026
+                <div class="s3-carousel-wrapper">
+                    <div class="s3-carousel">
+                        <!-- Carousel Item -->
+                        <div class="s3-carousel-inner">
+                            <!-- Temporary placeholder image mimicking the design -->
+                            <img src="{{ asset('images/slider/default.jpg') }}" alt="Berita Utama" class="s3-carousel-img" onerror="this.src='https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                            <div class="s3-carousel-overlay">
+                                <h3 class="s3-carousel-title">Bangun Keterampilan Digital Generasi Muda, Warga Pondok Karya Antusias Ikuti Pelatihan Videografi dari Pemkot Tangsel</h3>
+                                <div class="s3-carousel-date">
+                                    <span class="material-icons-round s3-date-icon">calendar_today</span>
+                                    <span style="color: white">20 Oktober 2024</span>
+                                </div>
                             </div>
                         </div>
+                        <!-- Controls -->
+                        <button class="s3-carousel-btn prev-btn"><span class="material-icons-round">chevron_left</span></button>
+                        <button class="s3-carousel-btn next-btn"><span class="material-icons-round">chevron_right</span></button>
                     </div>
-                    <!-- Controls -->
-                    <button class="s3-carousel-btn prev-btn"><span class="material-icons-round">chevron_left</span></button>
-                    <button class="s3-carousel-btn next-btn"><span class="material-icons-round">chevron_right</span></button>
-                    <!-- Pagination -->
+                    <!-- Pagination (Outside Image) -->
                     <div class="s3-carousel-dots">
                         <span class="s3-dot"></span>
-                        <span class="s3-dot active"></span>
                         <span class="s3-dot"></span>
+                        <span class="s3-dot"></span>
+                        <span class="s3-dot active"></span>
                         <span class="s3-dot"></span>
                     </div>
                 </div>
