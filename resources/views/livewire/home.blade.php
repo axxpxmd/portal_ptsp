@@ -2,4 +2,5 @@
     @include('livewire.home.section1')
     @include('livewire.home.section2')
     @include('livewire.home.section3')
+    @include('livewire.home.section4')
 </div>
