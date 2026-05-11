@@ -1,6 +1,6 @@
 .site-header {
     /* background: transparent; */
-    position: absolute;
+    position: fixed;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(15px);
     top: 0;
@@ -8,10 +8,39 @@
     width: 100%;
     z-index: 1000;
     overflow: visible;
+    transition: background 0.2s ease, backdrop-filter 0.2s ease;
+}
+
+.site-header.is-scrolled {
+    background: #ffffff;
+    backdrop-filter: none;
+}
+
+.site-header.is-scrolled .header-title,
+.site-header.is-scrolled .header-title-main,
+.site-header.is-scrolled .nav-list {
+    color: #0b1a22;
+}
+
+.site-header.is-scrolled .nav-toggle__icon,
+.site-header.is-scrolled .nav-toggle__icon::before,
+.site-header.is-scrolled .nav-toggle__icon::after {
+    background: #0b1a22;
+}
+
+.site-header.is-scrolled .nav-btn {
+    background: transparent;
+    color: #0b1a22;
+    border-color: #0b1a22;
+}
+
+.site-header.is-scrolled .nav-btn:hover {
+    background: #0b1a22;
+    color: #ffffff;
 }
 
 .header-inner {
-    margin: 0 auto;
+    /* margin: 0 auto; */
     width: 100%;
     /* max-width: 1400px; */
     display: flex;
