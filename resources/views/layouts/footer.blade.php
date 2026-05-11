@@ -15,6 +15,12 @@
 						</p>
 					</div>
 				</div>
+                <div class="footer-address" style="margin-top: 16px">
+					<span class="material-icons-round footer-pin" aria-hidden="true">phone</span>
+					<div class="footer-address-body">
+						<p class="footer-address-title">Telepon: (021) 22746509</p>
+					</div>
+				</div>
 			</div>
 
 			<div class="footer-col footer-info">
