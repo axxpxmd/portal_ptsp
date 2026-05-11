@@ -24,6 +24,7 @@
         <link rel="stylesheet" href="{{ asset('assets/css/util.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/header.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/footer.css') }}">
 
         @stack('styles')
     </head>
@@ -34,6 +35,7 @@
             <main class="app-main" style="background-color: #F5F5F5 !important;">
                {{ $slot }}
             </main>
+            @include('layouts.footer')
         </div>
         @stack('scripts')
     </body>
