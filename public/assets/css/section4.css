@@ -5,7 +5,6 @@
 	--s4-muted: #5d6b82;
 	--s4-border: #d6dde8;
 	--s4-card-bg: #ffffff;
-	--s4-shadow: 0 14px 30px rgba(17, 40, 83, 0.12);
 
 	position: relative;
 	overflow: hidden;
@@ -38,7 +37,7 @@
 .s4-container {
 	position: relative;
 	z-index: 1;
-	max-width: 1200px;
+	max-width: 85rem;
 	margin: 0 auto;
 	padding: 0 1.5rem;
 }
@@ -80,6 +79,7 @@
 	line-height: 1.6;
 }
 
+
 .s4-all {
 	display: inline-flex;
 	align-items: center;
@@ -91,13 +91,11 @@
 	text-decoration: none;
 	font-weight: 600;
 	background: #ffffff;
-	box-shadow: 0 10px 18px rgba(15, 79, 168, 0.1);
 	transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .s4-all:hover {
 	transform: translateY(-2px);
-	box-shadow: 0 14px 22px rgba(15, 79, 168, 0.16);
 }
 
 .s4-grid {
@@ -116,13 +114,14 @@
 	border-radius: 18px;
 	border: 1px solid var(--s4-border);
 	background: var(--s4-card-bg);
-	transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+	transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 .s4-card:hover {
 	transform: translateY(-4px);
-	border-color: #c4cedd;
-	box-shadow: var(--s4-shadow);
+	border-color: transparent;
+	background: linear-gradient(135deg, #1f77d2, #2a8bea);
+	color: #ffffff;
 }
 
 .s4-card-top {
@@ -141,7 +140,6 @@
 	justify-content: center;
 	background: var(--s4-accent-bg, #e7f1ff);
 	color: var(--s4-accent, #1f77d2);
-	box-shadow: inset 0 0 0 1px rgba(15, 79, 168, 0.08);
 }
 
 .s4-icon .material-symbols-outlined {
@@ -194,25 +192,21 @@
 }
 
 .s4-card.is-featured {
-	background: linear-gradient(135deg, #1f77d2, #2a8bea);
-	border-color: transparent;
-	color: #ffffff;
-	box-shadow: 0 16px 32px rgba(31, 119, 210, 0.3);
+	border-color: rgba(31, 119, 210, 0.35);
 }
 
-.s4-card.is-featured .s4-card-title,
-.s4-card.is-featured .s4-card-desc,
-.s4-card.is-featured .s4-card-link {
+.s4-card:hover .s4-card-title,
+.s4-card:hover .s4-card-desc,
+.s4-card:hover .s4-card-link {
 	color: #ffffff;
 }
 
-.s4-card.is-featured .s4-icon {
+.s4-card:hover .s4-icon {
 	background: rgba(255, 255, 255, 0.18);
 	color: #ffffff;
-	box-shadow: none;
 }
 
-.s4-card.is-featured .s4-dots {
+.s4-card:hover .s4-dots {
 	background-image: radial-gradient(circle, rgba(255, 255, 255, 0.6) 2px, transparent 2px);
 	opacity: 0.9;
 }
