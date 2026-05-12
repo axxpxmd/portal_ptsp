@@ -14,6 +14,7 @@
 
     <li class="nav-item{{ $hasChildren ? ' has-children' : '' }}">
         <a
+            wire:navigate
             href="{{ $href }}"
             class="{{ $linkClass }}{{ $isButton ? ' nav-btn' : '' }}"
             target="{{ $menu->target }}"

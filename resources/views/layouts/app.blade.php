@@ -25,6 +25,7 @@
         <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/header.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/footer.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/breadcrumb.css') }}">
 
         @stack('styles')
     </head>
@@ -37,6 +38,7 @@
             </main>
             @include('layouts.footer')
         </div>
+
         @stack('scripts')
     </body>
 </html>
