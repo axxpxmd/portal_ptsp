@@ -5,17 +5,18 @@
 @endpush
 
 <div class="vm-wrapper">
-    <div class="vm-container">
-        <x-breadcrumb :items="[
+    <x-breadcrumb
+        :items="[
             ['label' => 'Beranda', 'url' => route('home')],
+            ['label' => 'Profil Kota', 'url' => '#'],
             ['label' => 'Visi & Misi', 'url' => '#']
-        ]" />
+        ]"
+        title="Visi dan Misi Kota Tangerang Selatan"
+        subtitle="Pelajari visi dan misi Kota Tangerang Selatan sebagai arah pembangunan dan tujuan bersama."
+        bgImage="images/bg1.webp"
+    />
 
-        <header class="vm-header">
-            <h1 class="vm-title">Visi &amp; Misi</h1>
-            <p class="vm-subtitle">Arah strategis DPMPTSP Kota Tangerang Selatan</p>
-        </header>
-
+    <div class="vm-container">
         <div class="vm-content">
             <section class="vm-section vm-vision-section">
                 <span class="vm-badge">Visi</span>

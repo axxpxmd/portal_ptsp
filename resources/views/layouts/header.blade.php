@@ -16,11 +16,6 @@
 
         <nav class="header-nav" id="primary-navigation" aria-label="Primary">
             <ul class="nav-list">
-                <li class="nav-item">
-                    <a wire:navigate href="{{ route('visi-misi') }}" class="nav-link">
-                        <span>Visi &amp; Misi</span>
-                    </a>
-                </li>
                 @include('layouts.partials.header-menu-items', [
                     'menus' => $headerMenus ?? collect(),
                     'depth' => 0,

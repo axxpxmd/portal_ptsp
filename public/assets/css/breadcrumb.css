@@ -1,64 +1,83 @@
-.ui-breadcrumb {
-    display: inline-flex;
-    align-items: center;
-    background: url('../../images/bg1.webp') no-repeat center center;
-    background-size: cover;
-    padding: 10px 24px;
-    border-radius: 99px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    margin-bottom: 2rem;
-    flex-wrap: wrap;
-    column-gap: 2px;
+.ui-page-header {
     position: relative;
-    overflow: hidden;
+    background-color: #1f2937;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 110px 20px 80px;
+    color: #ffffff;
+    margin-bottom: 48px;
 }
 
-.ui-breadcrumb::before {
+.ui-page-header::before {
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(255, 255, 255, 0.85); /* Overlay agar teks tetap terbaca */
-    backdrop-filter: blur(8px);
-    z-index: 0;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 1;
+}
+
+.ui-page-header-content {
+    position: relative;
+    z-index: 2;
+    max-width: 85rem;
+    margin: 0 auto;
+}
+
+.ui-breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+    font-size: 14px;
 }
 
 .ui-breadcrumb-item {
     display: inline-flex;
     align-items: center;
-    font-size: 13.5px;
-    position: relative;
-    z-index: 1;
+    gap: 8px;
 }
 
 .ui-breadcrumb-link {
-    color: #475569;
+    color: #e2e8f0;
     text-decoration: none;
     font-weight: 500;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    transition: color 0.3s ease;
+    transition: color 0.2s ease;
 }
 
 .ui-breadcrumb-link:hover {
-    color: #0a8f8f;
+    color: #ffffff;
 }
 
 .ui-breadcrumb-sep {
     color: #94a3b8;
-    margin: 0 10px;
-    font-size: 11px;
+    font-size: 10px;
 }
 
 .ui-breadcrumb-current {
-    color: #0f172a;
+    color: #ffffff;
     font-weight: 600;
 }
 
+.ui-page-header-title {
+    font-size: clamp(28px, 4vw, 32px);
+    font-weight: 700;
+    margin: 0 0 12px 0;
+    color: #ffffff;
+}
+
+.ui-page-header-subtitle {
+    font-size: 16px;
+    color: #e2e8f0;
+    margin: 0;
+    line-height: 1.6;
+    max-width: 800px;
+}
+
 @media (max-width: 640px) {
-    .ui-breadcrumb {
-        padding: 8px 18px;
-        margin-bottom: 24px;
+    .ui-page-header {
+        padding: 110px 20px 60px;
+        margin-bottom: 32px;
     }
 }
