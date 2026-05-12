@@ -4,7 +4,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 110px 20px 80px;
+    padding: 110px 20px 150px;
     color: #ffffff;
     margin-bottom: 48px;
 }
@@ -80,4 +80,18 @@
         padding: 110px 20px 60px;
         margin-bottom: 32px;
     }
+}
+
+.content-box-wrapper {
+    position: relative;
+    z-index: 3;
+}
+
+.content-box {
+    background-color: white;
+    border-radius: 12px;
+    padding: 24px 16px;
+    min-height: 200px;
+    max-width: 85rem;
+    margin: -140px auto 0;
 }
