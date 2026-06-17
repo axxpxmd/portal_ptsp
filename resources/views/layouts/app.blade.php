@@ -33,9 +33,14 @@
         <div class="app-shell">
             @include('layouts.header')
 
-            <main class="app-main" style="background-color: #F5F5F5 !important;">
+            <main class="app-main" style="background-color: #F2F2F2 !important;">
                {{ $slot }}
             </main>
+
+            <div class="footer-decor">
+                <img src="{{ asset('images/town-city-3.png') }}" alt="Tangerang Selatan City Illustration" class="footer-decor__img">
+            </div>
+
             @include('layouts.footer')
         </div>
 

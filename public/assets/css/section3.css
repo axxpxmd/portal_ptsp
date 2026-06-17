@@ -1,7 +1,7 @@
 /* s3 = section 3 */
 .s3-section {
     padding: 3rem 0;
-    background-color: #F5F5F5;
+    /* background-color: #F5F5F5; */
     /* slightly matching the outer bg if any, or white */
     font-family: inherit;
 }
@@ -65,7 +65,8 @@
     border-radius: 1rem;
     overflow: hidden;
     background-color: #000;
-    aspect-ratio: 4 / 3; /* To keep it somewhat rectangular */
+    aspect-ratio: 4 / 3;
+    /* To keep it somewhat rectangular */
     display: block;
     margin-top: 1.5rem;
 }
@@ -88,7 +89,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 50%, transparent 100%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.6) 50%, transparent 100%);
     padding: 2rem 2rem 1rem 1.5rem;
     color: #fff;
 }
@@ -98,7 +99,7 @@
     font-weight: 800;
     margin-bottom: 0.75rem;
     line-height: 1.3;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.9);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
 }
 
 .s3-carousel-date {
@@ -122,14 +123,14 @@
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255, 255, 255, 0.9);
     color: #0b4b8a;
     border: none;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: background 0.3s, transform 0.2s;
     z-index: 2;
 }
@@ -171,7 +172,8 @@
 .s3-dot.active {
     width: 36px;
     border-radius: 9999px;
-    background-color: #0b4b8a; /* active dot blue */
+    background-color: #0b4b8a;
+    /* active dot blue */
 }
 
 /* Column 2: List News (Berita Populer & Terbaru) */
