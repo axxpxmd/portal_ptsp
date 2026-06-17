@@ -1,0 +1,211 @@
+.vm-wrapper {
+    background-color: #fafafa;
+    min-height: 100vh;
+    padding: 0 0 100px;
+    color: #111827;
+}
+
+.vm-content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 16px 8px;
+}
+
+@media (min-width: 900px) {
+    .vm-content-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        padding: 32px;
+    }
+}
+
+/* Custom Labels */
+.vm-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 20px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    border-radius: 99px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.vm-label.bg-emerald {
+    color: #059669;
+    background-color: #d1fae5;
+    border: 1px solid #34d399;
+}
+
+.vm-label.bg-amber {
+    color: #d97706;
+    background-color: #fef3c7;
+    border: 1px solid #fbbf24;
+}
+
+/* Vision Card */
+.vm-vision {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.vm-vision-card {
+    position: relative;
+    background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+    padding: 48px 32px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+    overflow: hidden;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: default;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vm-vision-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 50px rgba(16, 185, 129, 0.08);
+}
+
+.vm-quote-mark {
+    position: absolute;
+    top: 24px;
+    left: 20px;
+    font-size: 80px;
+    color: #ecfdf5;
+    z-index: -1;
+    transform: rotate(-10deg);
+}
+
+.vm-vision-decor {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, rgba(16,185,129,0.08) 0%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.vm-vision-text {
+    font-size: clamp(22px, 2.8vw, 30px);
+    line-height: 1.6;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.vm-vision-text::before {
+    content: '';
+    position: absolute;
+    left: -32px;
+    top: 5%;
+    bottom: 5%;
+    width: 4px;
+    background: #10b981;
+    border-radius: 0 4px 4px 0;
+}
+
+/* Mission List */
+.vm-mission {
+    display: flex;
+    flex-direction: column;
+}
+
+.vm-mission-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.vm-mission-list li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 16px 24px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.015);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+}
+
+.vm-mission-list li::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 0; height: 100%;
+    background: linear-gradient(90deg, rgba(245,158,11,0.04) 0%, transparent 100%);
+    transition: width 0.4s ease;
+    z-index: 0;
+}
+
+.vm-mission-list li:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.06);
+    border-color: #fde68a;
+}
+
+.vm-mission-list li:hover::after {
+    width: 100%;
+}
+
+.vm-number-box {
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+    font-size: 16px;
+    font-weight: 800;
+    color: #d97706;
+    background-color: #fef3c7;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.vm-mission-list p {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    flex: 1;
+    font-size: 15px;
+    line-height: 1.55;
+    color: #334155;
+    font-weight: 500;
+}
+
+.vm-list-icon {
+    position: relative;
+    z-index: 1;
+    color: #cbd5e1;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    transform: translateX(-10px);
+    opacity: 0;
+}
+
+.vm-mission-list li:hover .vm-list-icon {
+    color: #f59e0b;
+    transform: translateX(0);
+    opacity: 1;
+}

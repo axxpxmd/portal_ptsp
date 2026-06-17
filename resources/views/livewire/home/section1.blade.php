@@ -8,7 +8,7 @@
 
         <div class="home-hero__content home-hero__content--alt">
             <!-- Tampilan 1 -->
-            <div class="hero-slider-wrap">
+            {{-- <div class="hero-slider-wrap">
                 <div class="hero-slider__intro">
                     <h1 class="hero-slider__title display-font" style="text-align: center">Dinas Penanaman Modal dan Pelayanan Terpadu Kota Tangerang Selatan</h1>
                     <p class="hero-slider__subtitle" style="text-align: center">Selamat Datang di Website Resmi Dinas DPMPTSP Provinsi Jawa Barat</p>
@@ -90,10 +90,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
             <!-- Tampilan 2 -->
-            {{-- <div class="hero-alt">
+            <div class="hero-alt">
                 <div class="hero-alt__left">
                     <h2 class="hero-alt__title">DPMPTSP Kota Tangerang Selatan</h2>
                     <p class="hero-alt__desc">
@@ -142,7 +142,7 @@
                         </div>
                     </div>
                 </aside>
-            </div> --}}
+            </div>
 
             <!-- Tampilan 3 -->
             <div>
