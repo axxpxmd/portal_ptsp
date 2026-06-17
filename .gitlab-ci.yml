@@ -48,7 +48,7 @@ deploy_to_staging:
         echo "Menyambung ke $CI_SSH_USER@$CI_SSH_HOST:$CI_SSH_PORT ..."
         sshpass -p "$SSH_PASSWORD" ssh -o StrictHostKeyChecking=no -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" '
            echo "[LOG] Menjalankan pull.sh di staging";
-           curl -sL --header "PRIVATE-TOKEN: glpat-W3EasicxWz5f9bzUMBzt" "https://git.tangerangselatankota.go.id/api/v4/projects/136/repository/files/pull.sh/raw?ref=main" \
+           curl -sL --header "PRIVATE-TOKEN: $GITLAB_TOKEN" "https://git.tangerangselatankota.go.id/api/v4/projects/136/repository/files/pull.sh/raw?ref=main" \
            | tr -d "\r" > /bin/pull.sh;
            chmod +x /bin/pull.sh;
            GITLAB_TOKEN='"$GITLAB_TOKEN"' GITLAB_USER='"$GITLAB_USER"' GIT_REPO='"$GIT_REPO"' bash /bin/pull.sh
