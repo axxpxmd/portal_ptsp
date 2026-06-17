@@ -20,6 +20,24 @@ body {
     flex: 1;
 }
 
+.app-main--constellation {
+    position: relative;
+}
+
+#constellation-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.app-main--constellation > *:not(#constellation-canvas) {
+    position: relative;
+    z-index: 1;
+}
+
 .footer-decor {
     width: 100%;
     background-color: #F5F5F5;

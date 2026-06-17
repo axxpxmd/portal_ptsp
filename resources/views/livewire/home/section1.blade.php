@@ -100,7 +100,7 @@
                 <div class="hero-alt__left">
                     <h2 class="hero-alt__title">DPMPTSP Kota Tangerang Selatan</h2>
                     <p class="hero-alt__desc">
-                        Akses informasi dan layanan publik Kota Tangerang Selatan dengan mudah dan cepat.
+                        Pusat layanan perizinan terpadu dan informasi penanaman modal Kota Tangerang Selatan yang mudah, cepat, transparan, dan terintegrasi.
                     </p>
 
                     <div class="hero-alt__social" aria-label="Social media">

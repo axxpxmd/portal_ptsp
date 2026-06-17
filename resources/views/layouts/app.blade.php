@@ -33,7 +33,8 @@
         <div class="app-shell">
             @include('layouts.header')
 
-            <main class="app-main" style="background-color: #F2F2F2 !important;">
+            <main class="app-main app-main--constellation" style="background-color: #F2F2F2 !important;">
+                <canvas id="constellation-canvas" aria-hidden="true"></canvas>
                {{ $slot }}
             </main>
 
@@ -45,5 +46,100 @@
         </div>
 
         @stack('scripts')
+
+        <script>
+        (function () {
+            const canvas = document.getElementById('constellation-canvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            const main = canvas.parentElement;
+
+            const CONFIG = {
+                particleCount: 80,
+                maxDistance: 150,
+                dotRadius: 2.5,
+                dotColor: 'rgba(30, 140, 220, 0.65)',
+                lineColor: 'rgba(30, 140, 220, ',
+                speed: 0.45,
+                bgColor: 'transparent',
+            };
+
+            let particles = [];
+            let animId;
+
+            function resize() {
+                canvas.width  = main.offsetWidth;
+                canvas.height = main.offsetHeight;
+            }
+
+            function createParticles() {
+                particles = [];
+                for (let i = 0; i < CONFIG.particleCount; i++) {
+                    particles.push({
+                        x:  Math.random() * canvas.width,
+                        y:  Math.random() * canvas.height,
+                        vx: (Math.random() - 0.5) * CONFIG.speed * 2,
+                        vy: (Math.random() - 0.5) * CONFIG.speed * 2,
+                        r:  CONFIG.dotRadius + Math.random() * 1.2,
+                    });
+                }
+            }
+
+            function draw() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                // Move + bounce
+                for (const p of particles) {
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    if (p.x < 0 || p.x > canvas.width)  p.vx *= -1;
+                    if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+                }
+
+                // Draw lines
+                for (let i = 0; i < particles.length; i++) {
+                    for (let j = i + 1; j < particles.length; j++) {
+                        const dx   = particles[i].x - particles[j].x;
+                        const dy   = particles[i].y - particles[j].y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+                        if (dist < CONFIG.maxDistance) {
+                            const alpha = (1 - dist / CONFIG.maxDistance) * 0.45;
+                            ctx.beginPath();
+                            ctx.strokeStyle = CONFIG.lineColor + alpha + ')';
+                            ctx.lineWidth   = 0.8;
+                            ctx.moveTo(particles[i].x, particles[i].y);
+                            ctx.lineTo(particles[j].x, particles[j].y);
+                            ctx.stroke();
+                        }
+                    }
+                }
+
+                // Draw dots
+                for (const p of particles) {
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                    ctx.fillStyle = CONFIG.dotColor;
+                    ctx.fill();
+                }
+
+                animId = requestAnimationFrame(draw);
+            }
+
+            function init() {
+                resize();
+                createParticles();
+                cancelAnimationFrame(animId);
+                draw();
+            }
+
+            const ro = new ResizeObserver(function () {
+                resize();
+                createParticles();
+            });
+            ro.observe(main);
+
+            init();
+        })();
+        </script>
     </body>
 </html>
