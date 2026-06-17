@@ -1,10 +1,13 @@
 @push('styles')
     <link rel="stylesheet" href="{{ asset('assets/css/section1.css') }}">
 @endpush
-
 <section class="home-hero">
     <div class="home-hero__frame home-hero__frame--alt">
-        <div class="home-hero__bg" style="background-image: url('{{ asset('images/bg1.webp') }}');"></div>
+        <div class="home-hero__bg">
+            <video autoplay loop muted playsinline>
+                <source src="{{ asset('images/video.mp4') }}" type="video/mp4">
+            </video>
+        </div>
 
         <div class="home-hero__content home-hero__content--alt">
             <!-- Tampilan 1 -->
